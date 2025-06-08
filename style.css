@@ -78,23 +78,14 @@ nav a:hover {
 }
 
 .project-card img {
-  width: 100%;        /* Bild füllt die Breite der Karte */
-  height: auto;       /* Höhe passt sich proportional an */
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  object-fit: cover;  /* Bild wird ggf. zugeschnitten, um die Box zu füllen */
+  object-fit: cover;
 }
-
 
 .project-card:hover {
   transform: scale(1.05);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-  max-height: 155px;
-  width: 100%;
-  object-fit: cover;
 }
 
 .project-card h3 {
@@ -121,7 +112,7 @@ nav a:hover {
   background-color: #e0c200;
 }
 
-/* === KONTAKTFORMULAR === */ /* Stil für Kontaktformular + Buttons + Feedback-Text */
+/* === KONTAKTFORMULAR === */
 #contact {
   background-color: #1a1a1a;
   padding: 50px 20px;
@@ -174,7 +165,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* === FOOTER === */ /* Footer Layout + Hover-Effekt auf Social Links */
+/* === FOOTER === */
 footer {
   background-color: #111;
   color: white;
@@ -200,7 +191,7 @@ footer .socials a:hover {
   color: #ffd700;
 }
 
-/* === RESPONSIVES DESIGN === */ /* Passt Navigation, Projekt-Grid und Kontaktformular für Tablets und Handys an */
+/* === RESPONSIVES DESIGN === */
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
@@ -290,7 +281,3 @@ body.dark-mode a {
 body.dark-mode footer .socials a:hover {
   color: #bb86fc;
 }
-
-/* Du kannst weitere Elemente anpassen */
-
-

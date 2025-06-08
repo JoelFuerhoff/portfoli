@@ -1,5 +1,6 @@
-// Wartet bis die Seite komplett geladen ist // Formularvalidierung: Felder prüfen, E-Mail validieren, Feedback anzeigen
+// Wartet bis die Seite komplett geladen ist
 document.addEventListener("DOMContentLoaded", () => {
+  // Formular-Validierung
   const form = document.getElementById("contactForm");
   const feedback = document.getElementById("formFeedback");
 
@@ -29,18 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.reset();
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Dark Mode Toggle & LocalStorage
   const toggle = document.getElementById("darkModeToggle");
   const body = document.body;
 
-  // Lade den gespeicherten Modus
+  // Dark Mode Status aus localStorage lesen und anwenden
   if (localStorage.getItem("darkMode") === "enabled") {
     body.classList.add("dark-mode");
     toggle.checked = true;
   }
 
+  // Umschalten des Dark Modes
   toggle.addEventListener("change", () => {
     if (toggle.checked) {
       body.classList.add("dark-mode");
