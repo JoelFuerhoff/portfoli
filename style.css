@@ -1,0 +1,151 @@
+/* === Grundlegende Einstellungen für die gesamte Seite === */
+* {
+    margin: 0;               /* Entfernt Standardabstand (Außen) */
+    padding: 0;              /* Entfernt Standardabstand (Innen) */
+    box-sizing: border-box; /* Rechnet Padding in die Gesamtbreite mit ein */
+    font-family: Arial, sans-serif; /* Schriftart für alles */
+    scroll-behavior: smooth; /* Scrollen beim Klick auf Menü ist weich */
+  }
+  
+  /* === Body (Seitenhintergrund und Grundfarbe/Text) === */
+  body {
+    background-color: #f4f4f4; /* Hellgrauer Hintergrund */
+    color: #333;               /* Dunkle Schrift */
+    line-height: 1.6;          /* Zeilenhöhe für bessere Lesbarkeit */
+  }
+  
+  /* === Navigation oben === */
+  header {
+    background-color: #1c3f94; /* Dunkles Blau für Header */
+    padding: 20px 0;           /* Abstand oben/unten */
+  }
+  
+  nav ul {
+    display: flex;             /* Horizontale Navigation */
+    justify-content: center;  /* Zentriert das Menü */
+    list-style: none;         /* Entfernt Aufzählungszeichen */
+  }
+  
+  nav ul li {
+    margin: 0 15px;            /* Abstand zwischen Links */
+  }
+  
+  nav ul li a {
+    color: white;              /* Weiße Schrift im Menü */
+    text-decoration: none;     /* Kein Unterstrich */
+    font-weight: bold;
+    transition: color 0.2s;    /* Sanfter Farbwechsel beim Hover */
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;            /* Gold beim Drüberfahren */
+  }
+  
+  /* === Hero-Bereich === */
+  #hero {
+    background: linear-gradient(to right, #4a90e2, #1c3f94); /* Farbverlauf */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;       /* Viel Abstand oben/unten */
+  }
+  
+  /* === Sektionen (Über mich, Projekte, Kontakt) === */
+  section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* === Projektkarten === */
+  .project {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .project:hover {
+    transform: scale(1.02);   /* Leichtes Vergrößern beim Hover */
+  }
+  
+  /* === Kontaktformular === */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #1c3f94;
+  }
+  
+  /* === Footer === */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* === Animation: Einblenden beim Scrollen === */
+  section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* === Responsive Design (für Smartphones) === */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    #hero {
+      padding: 60px 10px;
+    }
+  }
+
+   /* === Social Media Icons im Footer === */
+footer .socials {
+    margin-top: 15px;
+  }
+  
+  footer .socials a {
+    color: white;
+    margin: 0 10px;
+    transition: color 0.2s;
+  }
+  
+  footer .socials a:hover {
+    color: #ffd700; /* Gold beim Hover */
+  }

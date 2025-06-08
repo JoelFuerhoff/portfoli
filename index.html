@@ -1,0 +1,107 @@
+<!--Beginn des HTML-Dokuments-->
+<!DOCTYPE html>
+<html lang="de"><!--Spracheinstellung: Deutsch-->
+    <head>
+        <meta charset="UTF-8"><!--Zeichencodierung: Umlaute und Sonderzeichen funktionieren-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Wichtig für Responsive Design auf Mobilgeräten-->
+        <title>Mein Portfolio</title><!--Seitentitel im Tab-->
+
+        <!--Verbindung zur externen CSS-Datei-->
+        <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome für Icons -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+
+    </head>
+
+    <body>
+        <!--Kopfbereich mit Navigation-->
+        <header>
+            <nav>
+                <!--Navigationsmenü-->
+                <ul>
+                    <li><a href="#hero"></a></li>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Hero-Bereich = Wilkommens-Block ganz oben-->
+        <section id="hero">
+            <h1>Hallo, ich bin Joel Fürhoff</h1>
+            <p>Ich bin 23 Jahre alt und leidenschaftlicher Webentwickler</p>
+            <p>Ich baue moderne, responsive Webseiten mit HTML, CSS und JavaScript.</p>
+    </body>
+
+    <!--Projektbereich - zeige, was du gebaut hast-->
+    <section id="projects">
+        <h2>Projekte</h2>
+
+        <!--Einzelnes Projekt -->
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Meine eigene Portfolio-Seite mit HTML, CSS & JavaScript.</p>
+
+            <div class="project">
+                <h3>Interaktive Quiz-App</h3>
+                <p>Ei n Mini-Quiz mit JavaScript-Logik und dynamischer Auswertung.</p>
+            </div>
+            <div class="project">
+                <h3>Responsive Landingpage</h3>
+                <p>Mobile-optimiertes Einsteigerprojekt mit Flexbox und Media Queries</p>
+            </div>
+    </section>
+
+    <!--Kontaktformular-->
+    <section id="contact">
+        <h2>Kontakt</h2>
+
+    <!--Das Kontaktformular-->
+    <form id="contactForm">
+        <!-- Textfeld für den Namen -->
+         <input type="text" id="name" placeholder="Name" required>
+         
+         <!--E-Mail-Adresse-->
+            <input type="email" id="email" placeholder="E-Mail" required>
+
+            <!--Nachricht-->
+            <textarea id="message" placeholder="Nachricht" rows="4" required></textarea>
+
+            <!--Hier erscheint Feedback per JavaScript-->
+            <p id="formFeedback"></p>
+    </form>
+    </section>
+
+    <!--Footer = unterster Bereich der Seite-->
+    <footer>
+        <p>&copy; 2025 Joel Fürhoff - Webentwickler</p>
+
+        <footer>
+            <p>&copy; 2025 Joel Fürhoff - Webentwickler</p>
+          
+            <!-- Social Icons -->
+            <div class="socials">
+              <a href="https://github.com/deinGitHubName" target="_blank" title="GitHub">
+                <i class="fab fa-github fa-2x"></i>
+              </a>
+              <a href="https://linkedin.com/in/deinLinkedInName" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+              <a href="mailto:deine@email.de" title="E-Mail">
+                <i class="fas fa-envelope fa-2x"></i>
+              </a>
+            </div>
+          </footer>
+          
+    </footer>
+
+    <!--Verbindung zur JavaScript-Datei-->
+    <script src="script.js"></script>
+    </body>
+</html
