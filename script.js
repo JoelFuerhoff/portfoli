@@ -1,51 +1,53 @@
-// === WARTET, BIS DIE SEITE GELADEN IST ===
-document.addEventListener("DOMContentLoaded", function () {
+// Wartet bis die Seite komplett geladen ist // Formularvalidierung: Felder prüfen, E-Mail validieren, Feedback anzeigen
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const feedback = document.getElementById("formFeedback");
 
-    // === SCROLL-ANIMATION: Wenn der Benutzer runterscrollt, werden Sektionen eingeblendet ===
-    const sections = document.querySelectorAll("section"); // Holt alle <section>-Elemente
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible"); // Wenn sichtbar → füge Klasse hinzu (siehe CSS)
-        }
-      });
-    }, {
-      threshold: 0.1 // Bereich, ab wann der Effekt greift (10 % sichtbar)
-    });
-  
-    sections.forEach(section => {
-      observer.observe(section); // Beobachte jede Section
-    });
-  
-    // === FORMULAR-VALIDIERUNG & FEEDBACK ===
-    const form = document.getElementById("contactForm"); // Holt das Formular
-    const feedback = document.getElementById("formFeedback"); // Feedback-Absatz unter dem Button
-  
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Verhindert automatisches Neuladen der Seite beim Absenden
-  
-      // Werte auslesen
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-  
-      // Grundprüfung: Alle Felder müssen ausgefüllt sein
-      if (!name || !email || !message) {
-        feedback.textContent = "Bitte fülle alle Felder aus!";
-        feedback.style.color = "red";
-        return;
-      }
-  
-      // Erfolgsmeldung
-      feedback.textContent = "Vielen Dank, Joel! Deine Nachricht wurde (simuliert) gesendet.";
-      feedback.style.color = "green";
-  
-      // Optional: Formular zurücksetzen
-      form.reset();
-    });
-  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Verhindert das automatische Absenden
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      feedback.textContent = "Bitte fülle alle Felder aus!";
+      feedback.style.color = "red";
+      return;
+    }
+
+    // Einfache Email-Validierung
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      feedback.textContent = "Bitte gib eine gültige E-Mail-Adresse ein!";
+      feedback.style.color = "red";
+      return;
+    }
+
+    feedback.textContent = `Vielen Dank, ${name}! Deine Nachricht wurde (simuliert) gesendet.`;
+    feedback.style.color = "green";
+
+    form.reset();
   });
+});
 
- 
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Lade den gespeicherten Modus
+  if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      body.classList.add("dark-mode");
+      localStorage.setItem("darkMode", "enabled");
+    } else {
+      body.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", "disabled");
+    }
+  });
+});

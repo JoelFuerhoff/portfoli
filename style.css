@@ -1,151 +1,296 @@
-/* === Grundlegende Einstellungen für die gesamte Seite === */
-* {
-    margin: 0;               /* Entfernt Standardabstand (Außen) */
-    padding: 0;              /* Entfernt Standardabstand (Innen) */
-    box-sizing: border-box; /* Rechnet Padding in die Gesamtbreite mit ein */
-    font-family: Arial, sans-serif; /* Schriftart für alles */
-    scroll-behavior: smooth; /* Scrollen beim Klick auf Menü ist weich */
-  }
-  
-  /* === Body (Seitenhintergrund und Grundfarbe/Text) === */
-  body {
-    background-color: #f4f4f4; /* Hellgrauer Hintergrund */
-    color: #333;               /* Dunkle Schrift */
-    line-height: 1.6;          /* Zeilenhöhe für bessere Lesbarkeit */
-  }
-  
-  /* === Navigation oben === */
-  header {
-    background-color: #1c3f94; /* Dunkles Blau für Header */
-    padding: 20px 0;           /* Abstand oben/unten */
-  }
-  
-  nav ul {
-    display: flex;             /* Horizontale Navigation */
-    justify-content: center;  /* Zentriert das Menü */
-    list-style: none;         /* Entfernt Aufzählungszeichen */
-  }
-  
-  nav ul li {
-    margin: 0 15px;            /* Abstand zwischen Links */
-  }
-  
-  nav ul li a {
-    color: white;              /* Weiße Schrift im Menü */
-    text-decoration: none;     /* Kein Unterstrich */
-    font-weight: bold;
-    transition: color 0.2s;    /* Sanfter Farbwechsel beim Hover */
-  }
-  
-  nav ul li a:hover {
-    color: #ffd700;            /* Gold beim Drüberfahren */
-  }
-  
-  /* === Hero-Bereich === */
-  #hero {
-    background: linear-gradient(to right, #4a90e2, #1c3f94); /* Farbverlauf */
-    color: white;
-    text-align: center;
-    padding: 100px 20px;       /* Viel Abstand oben/unten */
-  }
-  
-  /* === Sektionen (Über mich, Projekte, Kontakt) === */
-  section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  /* === Projektkarten === */
-  .project {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    transition: transform 0.2s ease;
-  }
-  
-  .project:hover {
-    transform: scale(1.02);   /* Leichtes Vergrößern beim Hover */
-  }
-  
-  /* === Kontaktformular === */
-  form {
-    display: flex;
+/* === ALLGEMEIN === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+/* === NAVIGATION === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* === INTRO-BEREICH === */
+.intro {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #1e1e1e, #292929);
+}
+
+.intro .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #ffd700;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.intro .btn:hover {
+  background: #e0c200;
+}
+
+/* === PROJEKTE SECTION === */
+#projects {
+  padding: 50px 20px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;        /* Bild füllt die Breite der Karte */
+  height: auto;       /* Höhe passt sich proportional an */
+  border-radius: 10px;
+  object-fit: cover;  /* Bild wird ggf. zugeschnitten, um die Box zu füllen */
+}
+
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 155px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ffd700;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card .btn:hover {
+  background-color: #e0c200;
+}
+
+/* === KONTAKTFORMULAR === */ /* Stil für Kontaktformular + Buttons + Feedback-Text */
+#contact {
+  background-color: #1a1a1a;
+  padding: 50px 20px;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact label {
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#contact button {
+  background-color: #ffd700;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #e0c200;
+}
+
+#formFeedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* === FOOTER === */ /* Footer Layout + Hover-Effekt auf Social Links */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+footer .socials {
+  margin-top: 10px;
+}
+
+footer .socials a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer .socials a:hover {
+  color: #ffd700;
+}
+
+/* === RESPONSIVES DESIGN === */ /* Passt Navigation, Projekt-Grid und Kontaktformular für Tablets und Handys an */
+@media (max-width: 768px) {
+  header nav ul {
     flex-direction: column;
-  }
-  
-  input,
-  textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  button {
-    background-color: #4a90e2;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  button:hover {
-    background-color: #1c3f94;
-  }
-  
-  /* === Footer === */
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* === Animation: Einblenden beim Scrollen === */
-  section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
-  }
-  
-  section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* === Responsive Design (für Smartphones) === */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
-  
-    #hero {
-      padding: 60px 10px;
-    }
+    gap: 10px;
   }
 
-   /* === Social Media Icons im Footer === */
-footer .socials {
-    margin-top: 15px;
+  .projects-container {
+    flex-direction: column;
   }
-  
-  footer .socials a {
-    color: white;
-    margin: 0 10px;
-    transition: color 0.2s;
+
+  #contact {
+    padding: 30px 15px;
   }
-  
-  footer .socials a:hover {
-    color: #ffd700; /* Gold beim Hover */
-  }
+}
+
+/* === Dark Mode Switch Style === */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode #contact {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .btn {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #666;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode footer .socials a:hover {
+  color: #bb86fc;
+}
+
+/* Du kannst weitere Elemente anpassen */
+
+
