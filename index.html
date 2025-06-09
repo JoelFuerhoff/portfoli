@@ -1,94 +1,112 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joel Fürhoff - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joel Fürhoff - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hauptinhalt kommt hier rein -->
+    <!-- Header  enthält Logo, Navigation und eine kurze Vorstellung mit Button -->
+    <header id="home">
+      <nav>
+        <h1>Joel Fürhoff</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <label class="switch">
+        <!-- Dark Mode Switch -->
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider round"></span>
+      </label>
 
-  <!-- Hauptinhalt kommt hier rein -->
-  <!-- Header  enthält Logo, Navigation und eine kurze Vorstellung mit Button -->
-  <header id="home">
-    <nav>
-      <h1>Joel Fürhoff</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projekte</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-    <label class="switch"> <!-- Dark Mode Switch -->
-      <input type="checkbox" id="darkModeToggle" />
-      <span class="slider round"></span>
-    </label>
-
-    <div class="intro">
-      <h2>Webentwickler aus Leidenschaft</h2>
-      <p>Ich entwickle moderne, perfomante Websites mit Fokus auf sauberen Code und starke Nutzererfahrung</p>
-      <a href="#projects" class="btn">Projekte ansehen</a>
-    </div>
-  </header>
-
-  <section id="projects" class="fade-in">
-    <h2>Meine Projekte</h2>
-    <div class="projects-container">
-
-      <div class="project-card fade-in">
-        <img src="img/prtfl-xsmpl.jpeg" alt="Screenshot Projekt 1" />
-        <h3>Projekt 1: Portfolio Website</h3>
-        <p>Moderne Portfolio-Seite mit HTML, CSS und JavaScript.</p>
-        <a href="https://github.com/JoelFuerhoff/portfolio" target="_blank" rel="noopener noreferrer" class="btn">Code ansehen</a>
+      <div class="intro">
+        <h2>Webentwickler aus Leidenschaft</h2>
+        <p>
+          Ich entwickle moderne, perfomante Websites mit Fokus auf sauberen Code
+          und starke Nutzererfahrung
+        </p>
+        <a href="#projects" class="btn">Projekte ansehen</a>
       </div>
+    </header>
 
-      <div class="project-card">
-        <img src="img/td-xsmpl.jpeg" alt="Screenshot Projekt 2" />
-        <h3>Projekt 2: ToDo App</h3>
-        <p>Interaktive ToDo-Liste mit localStorage und responsivem Design.</p>
-        <a href="#" class="btn">Code ansehen</a>
+    <section id="projects" class="fade-in">
+      <h2>Meine Projekte</h2>
+      <div class="projects-container">
+        <div class="project-card fade-in">
+          <img src="img/prtfl-xsmpl.jpeg" alt="Screenshot Projekt 1" />
+          <h3>Projekt 1: Portfolio Website</h3>
+          <p>Moderne Portfolio-Seite mit HTML, CSS und JavaScript.</p>
+          <a
+            href="https://github.com/JoelFuerhoff/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            >Code ansehen</a
+          >
+        </div>
+
+        <div class="project-card">
+          <img src="img/td-xsmpl.jpeg" alt="Screenshot Projekt 2" />
+          <h3>Projekt 2: ToDo App</h3>
+          <p>Interaktive ToDo-Liste mit localStorage und responsivem Design.</p>
+          <a href="#" class="btn">Code ansehen</a>
+        </div>
+
+        <div class="project-card">
+          <img src="img/blg-xsmpl.jpg" alt="Screenshot Projekt 3" />
+          <h3>Projekt 3: Blog Plattform</h3>
+          <p>Ein einfacher Blog mit Kommentar-Funktion und Admin-Bereich.</p>
+          <a href="#" class="btn">Code ansehen</a>
+        </div>
       </div>
+    </section>
+    <section id="contact" class="fade-in">
+      <!-- Einfaches Kontaktformular mit Name, Email, Nachricht + Feedback-Absatz -->
+      <h2>Kontakt</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
 
-      <div class="project-card">
-        <img src="img/blg-xsmpl.jpg" alt="Screenshot Projekt 3" />
-        <h3>Projekt 3: Blog Plattform</h3>
-        <p>Ein einfacher Blog mit Kommentar-Funktion und Admin-Bereich.</p>
-        <a href="#" class="btn">Code ansehen</a>
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Absenden</button>
+        <p id="formFeedback"></p>
+      </form>
+    </section>
+    <footer>
+      <p>© 2025 Joel Fürhoff - Webentwickler</p>
+      <div class="socials">
+        <a
+          href="https://github.com/JoelFuerhoff"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          🐙 GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/JoelFuerhoff"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          🔗 LinkedIn
+        </a>
+        <a href="mailto:fuerhoffjoel@gmail.com" aria-label="Email">
+          📧 E-Mail
+        </a>
       </div>
-    </div>
-  </section>
-  <section id="contact" class="fade-in"> <!-- Einfaches Kontaktformular mit Name, Email, Nachricht + Feedback-Absatz -->
-    <h2>Kontakt</h2>
-    <form id="contactForm" novalidate>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+    </footer>
 
-      <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="btn">Absenden</button>
-      <p id="formFeedback"></p>
-    </form>
-  </section>
-  <footer>
-    <p>© 2025 Joel Fürhoff - Webentwickler</p>
-    <div class="socials">
-      <a href="https://github.com/JoelFuerhoff" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        🐙 GitHub
-      </a>
-      <a href="https://linkedin.com/in/JoelFuerhoff" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        🔗 LinkedIn
-      </a>
-      <a href="mailto:fuerhoffjoel@gmail.com" aria-label="Email">
-        📧 E-Mail
-      </a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
