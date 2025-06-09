@@ -1,3 +1,7 @@
+html {
+  scroll-behaviour: smooth;
+}
+
 /* === ALLGEMEIN === */
 body {
   margin: 0;
@@ -281,3 +285,27 @@ body.dark-mode a {
 body.dark-mode footer .socials a:hover {
   color: #bb86fc;
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === FADE-IN ANIMATION === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
